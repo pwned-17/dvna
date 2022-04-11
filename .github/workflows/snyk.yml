@@ -4,10 +4,10 @@ jobs:
   snyk:
     runs-on: ubuntu-latest
     steps:
-      -uses: actions/checkout@master
-      -name: Run synk Scan 
-       uses: snyk/actions/node@master
-       env:
-         -SNYK_TOKEN: ${{secrets.SNYK_TOKEN}}
-       with:
-         command: monitor
+      - uses: actions/checkout@master
+      - name: Run synk Scan
+        uses: snyk/actions/node@master
+        env:
+          -SNYK_TOKEN: ${{secrets.SNYK_TOKEN}}
+        with:
+          command: monitor
