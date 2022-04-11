@@ -1,4 +1,4 @@
-name: build
+name: sonar-scan
 on:
   push:
     branches:
