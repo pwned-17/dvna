@@ -1,4 +1,4 @@
-name  : 'Slack alerts for Security Alerts'
+name: 'Slack alerts for Security Alerts'
 on:
   push:
     branches:
