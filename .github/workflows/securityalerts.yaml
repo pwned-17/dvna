@@ -1,1 +1,15 @@
 name  : Depandabot Alerts through Slack 
+
+on:
+  schedule:
+    - cron: '2 * * * *' # every 6 hours
+
+jobs:
+  main:
+    runs-on: ubuntu-latest
+    steps:
+      # X.X.X - Latest version available at: https://github.com/kunalnagarco/action-cve/releases
+      - uses: kunalnagarco/action-cve@vX.X.X
+        with:
+          token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+          slack_webhook: ${{ secrets.SLACK_WEBHOOK }}
