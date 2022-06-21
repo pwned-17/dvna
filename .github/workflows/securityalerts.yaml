@@ -8,6 +8,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       # X.X.X - Latest version available at: https://github.com/kunalnagarco/action-cve/releases
+      - name: Checkout
+        uses: actions/checkout@v3
       - uses: kunalnagarco/action-cve@vX.X.X
         with:
           token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
