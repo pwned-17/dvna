@@ -1,4 +1,4 @@
-name  : 'Slack'
+name  : 'Slack alerts for Security Alerts'
 on:
   schedule:
     - cron: '2 * * * *' # every 6 hours
