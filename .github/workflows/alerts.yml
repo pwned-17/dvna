@@ -1,7 +1,6 @@
 name: 'Slack alerts for Security Alerts'
 on:
-  schedule:
-    - cron: "* * */12 * *"
+  workflow_dispatch:
 jobs:
   main:
     runs-on: ubuntu-latest
