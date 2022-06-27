@@ -1,4 +1,4 @@
-name: 'Slack alerts for Security Alerts'
+name: ' Dependabot Alerts'
 on:
   workflow_dispatch:
 env:
