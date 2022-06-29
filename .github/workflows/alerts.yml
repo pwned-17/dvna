@@ -37,7 +37,7 @@ jobs:
         if: ${{ (steps.alerts.outputs.critical_alerts > 0) || (steps.alerts.outputs.high_alerts > 0) }}
         env:
           TOTAL_ALERTS: ${{ steps.alerts.outputs.total_alerts }}
-          REPO_URL: ${{ github.repositoryUrl }}
+          REPO_URL: ${{ steps.alerts.ouptuts.repo_url }}
         run: echo " Alerts Found $TOTAL_ALERTS and in $REPO_URL " && exit 1
      # - name: Login to Jira
      #   uses: atlassian/gajira-login@v2.0.0
