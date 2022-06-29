@@ -28,7 +28,7 @@ jobs:
       steps:
       - name: Check Dependabot Alerts
         id: alerts
-        uses: pwned-17/check-dependabot@v1.2.3
+        uses: pwned-17/check-dependabot@v2
         with:
           github_personal_token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}  
       - name: Checkout Repo
