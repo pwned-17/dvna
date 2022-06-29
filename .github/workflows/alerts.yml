@@ -9,18 +9,18 @@ env:
     JIRA_ISSUE_TYPE: Task
 
 jobs:
-  Send-Slack-Alerts:
-    runs-on: ubuntu-latest
-    steps:
-      # X.X.X - Latest version available at: https://github.com/kunalnagarco/action-cve/releases
-      - name: Checkout
-        uses: actions/checkout@v3
-      - name: Depebdabot-Slack Alerts
-        uses: pwned-17/dependabot-slack@v1.6.16
-        with:
-          token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
-          slack_webhook: ${{ secrets.SLACK_WEBHOOK }}
-          count: 20
+  #Send-Slack-Alerts:
+  #  runs-on: ubuntu-latest
+  #  steps:
+  #    # X.X.X - Latest version available at: https://github.com/kunalnagarco/action-cve/releases
+  #    - name: Checkout
+  #      uses: actions/checkout@v3
+  #   - name: Depebdabot-Slack Alerts
+  #     uses: pwned-17/dependabot-slack@v1.6.16
+  #      with:
+  #        token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+  #        slack_webhook: ${{ secrets.SLACK_WEBHOOK }}
+  #        count: 20
 
   create-jira:
       name: Dependabot Jira
