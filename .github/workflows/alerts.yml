@@ -28,7 +28,7 @@ jobs:
       steps:
       - name: Check Dependabot Alerts
         id: alerts
-        uses: spicyparrot/check-dependabot@v1.2.0
+        uses: pwned-17/check-dependabot@v1.2.1
         with:
           github_personal_token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}  
       - name: Checkout Repo
