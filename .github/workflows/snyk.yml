@@ -1,5 +1,6 @@
 name: Snyk Scan 
-on: [push,pull_request]
+on:
+  workflow_dispatch:
 jobs:
   snyk:
     runs-on: ubuntu-latest
