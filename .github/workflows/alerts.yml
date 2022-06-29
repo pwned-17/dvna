@@ -35,7 +35,7 @@ jobs:
       - name: Error Exit
         if: steps.alerts.outputs.total_alerts > 0
         env:
-          TOTAL_ALERTS: steps.outputs.total_alerts 
+          TOTAL_ALERTS: ${{ steps.alerts.outputs.total_alerts }} 
         run: echo " Alerts Found $TOTAL_ALERTS " && exit 1
      # - name: Login to Jira
      #   uses: atlassian/gajira-login@v2.0.0
