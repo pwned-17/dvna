@@ -31,7 +31,8 @@ jobs:
         uses: spicyparrot/check-dependabot@v1.2.0
         with:
           github_personal_token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}  
-
+      - name: Checkout Repo
+        uses: actions/checkout@v3
       - name: Create Tickets
         if: ${{ (steps.alerts.outputs.critical_alerts > 0) || (steps.alerts.outputs.high_alerts > 0) }}
         env:
