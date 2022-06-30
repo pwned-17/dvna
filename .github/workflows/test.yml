@@ -28,7 +28,7 @@ jobs:
       steps:
       - name: Check Dependabot Alerts
         id: alerts
-        uses: pwned-17/check-dependabot@v1.2.8
+        uses: pwned-17/check-dependabot@v1.2.9
         with:
           github_personal_token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}  
       - name: Checkout Repo
@@ -51,9 +51,12 @@ jobs:
           project: ${{ env.JIRA_PROJECT }}
           issuetype: ${{ env.JIRA_ISSUE_TYPE }}
           summary: |
-            Depenbdabot Alerts [ ${{ steps.alerts.outputs.repo_name }} ]
+            Open Depenbdabot Alerts for [ ${{ steps.alerts.outputs.repo_name }} ]
             
               
           description: |
-             Critical and High Vulnerabilites reported by Depebdabot
-              ${{ steps.alerts.outputs.summary }}
+               #${{ steps.alerts.outputs.summary }} 
+              ### Critical: ${{ steps.alerts.outputs.critical_alerts }}
+              ### High:  ${{ steps.alerts.outputs.high_alerts }}
+              ### Moderate:  ${{ steps.alerts.outputs.moderate_alerts }}	
+              ### Low : ${{ steps.alerts.outputs.low_alerts }}
