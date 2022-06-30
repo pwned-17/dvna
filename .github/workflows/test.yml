@@ -55,8 +55,8 @@ jobs:
             
               
           description: |
-               ### ${{ steps.alerts.outputs.summary }} \
-               - Critical: ${{ steps.alerts.outputs.critical_alerts }} \
-               - High:  ${{ steps.alerts.outputs.high_alerts }} \
-               - Moderate:  ${{ steps.alerts.outputs.moderate_alerts }} \
-               - Low : ${{ steps.alerts.outputs.low_alerts }} \
+               ${{ steps.alerts.outputs.summary }} 
+               - Critical: ${{ steps.alerts.outputs.critical_alerts }}  
+               - High:  ${{ steps.alerts.outputs.high_alerts }}  
+               - Moderate:  ${{ steps.alerts.outputs.moderate_alerts }} 
+               - Low : ${{ steps.alerts.outputs.low_alerts }}  
