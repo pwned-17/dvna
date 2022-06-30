@@ -39,7 +39,7 @@ jobs:
           TOTAL_ALERTS: ${{ steps.alerts.outputs.total_alerts }}
           REPO_URL: ${{ steps.alerts.outputs.repo_url }}
           REPO_NAME: ${{ steps.alerts.outputs.repo_name }}
-          SUMMARY: ${{ steps.alerts.ouputs.summary }}
+          SUMMARY: ${{ steps.alerts.outputs.summary }}
         run: echo " Alerts Found $TOTAL_ALERTS and in $REPO_URL and $REPO_NAME and the summary $SUMMARY " && exit 1
      # - name: Login to Jira
      #   uses: atlassian/gajira-login@v2.0.0
