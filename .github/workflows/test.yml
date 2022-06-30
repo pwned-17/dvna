@@ -53,8 +53,8 @@ jobs:
             
               
           description: |
-               There are currently ${{ steps.alerts.total_alerts }} dependabot alerts.  
-               **Affected Url** : ${{ steps.alerts.outputs.repo_url }} 
+               There are currently ${{ steps.alerts.outputs.total_alerts }} dependabot alerts.  
+               *Affected Url* : ${{ steps.alerts.outputs.repo_url }} 
                - Critical: ${{ steps.alerts.outputs.critical_alerts }}  
                - High:  ${{ steps.alerts.outputs.high_alerts }}  
                - Moderate:  ${{ steps.alerts.outputs.moderate_alerts }} 
