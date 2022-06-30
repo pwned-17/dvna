@@ -41,7 +41,6 @@ jobs:
           JIRA_BASE_URL: ${{ env.JIRA_BASE_URL }}
           JIRA_USER_EMAIL: ${{ env.JIRA_USER_EMAIL }}
           JIRA_API_TOKEN: ${{ secrets.JIRA_API_TOKEN }}
-        run: echo " Alerts Found $TOTAL_ALERTS and in $REPO_URL "
         uses: atlassian/gajira-login@v2.0.0
 
       - name: Create Jira Issue
