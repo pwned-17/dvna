@@ -36,8 +36,6 @@ jobs:
       - name: Create Tickets
         if: ${{ (steps.alerts.outputs.critical_alerts > 0) || (steps.alerts.outputs.high_alerts > 0) }}
         env:
-          TOTAL_ALERTS: ${{ steps.alerts.outputs.total_alerts }}
-          REPO_URL: ${{ steps.alerts.outputs.repo_url }}
           JIRA_BASE_URL: ${{ env.JIRA_BASE_URL }}
           JIRA_USER_EMAIL: ${{ env.JIRA_USER_EMAIL }}
           JIRA_API_TOKEN: ${{ secrets.JIRA_API_TOKEN }}
@@ -55,7 +53,8 @@ jobs:
             
               
           description: |
-               ${{ steps.alerts.outputs.summary }} 
+               There are currently ${{ steps.alerts.total_alerts }} dependabot alerts.  
+               **Affected Url** : ${{ steps.alerts.outputs.repo_url }} 
                - Critical: ${{ steps.alerts.outputs.critical_alerts }}  
                - High:  ${{ steps.alerts.outputs.high_alerts }}  
                - Moderate:  ${{ steps.alerts.outputs.moderate_alerts }} 
