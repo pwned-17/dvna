@@ -22,9 +22,7 @@ jobs:
            count: 20
 
   create-jira-task:
-      name: Dependabot Jira
       runs-on: ubuntu-latest
-     
       steps:
       
       - name: Check Dependabot Alerts
@@ -49,7 +47,7 @@ jobs:
           project: ${{ env.JIRA_PROJECT }}
           issuetype: ${{ env.JIRA_ISSUE_TYPE }}
           summary: |
-            Open Depenbdabot Alerts for [ ${{ steps.alerts.outputs.repo_name }} ]
+            Open Dependabot Alerts for [ ${{ steps.alerts.outputs.repo_name }} ]
             
           description: |
                There are currently ${{ steps.alerts.outputs.total_alerts }} dependabot alerts.  
