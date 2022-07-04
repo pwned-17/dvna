@@ -56,4 +56,4 @@ jobs:
                - High:  ${{ steps.alerts.outputs.high_alerts }}  
                - Moderate:  ${{ steps.alerts.outputs.moderate_alerts }} 
                - Low : ${{ steps.alerts.outputs.low_alerts }}
-               ${{ env.GITHUB_STEP_SUMMARY }}
+               - ${{ env.GITHUB_STEP_SUMMARY }}
