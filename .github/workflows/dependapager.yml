@@ -1,0 +1,16 @@
+name: Dependapager
+on:
+  workflow_dispatch:
+
+jobs:
+  send-slack-alerts:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Dependapager
+        uses: pwned-17/dependapager@v1.0
+        with:
+          github_personal_token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+          slack_token: ${{ secrets.SLACK_TOKEN }}
+          channel: C03NZAUCWK0
+        
+          
