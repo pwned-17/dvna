@@ -1,7 +1,7 @@
 name: Dependapager
 on:
   schedule:
-    - cron: "*/5 * * * *"
+    - cron: "*/6 * * * *"
 
 jobs:
   send-slack-alerts:
