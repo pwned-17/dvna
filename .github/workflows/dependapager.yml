@@ -7,10 +7,19 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Dependapager
-        uses: pwned-17/dependapager@v1.0
+        id: pager
+        uses: pwned-17/dependapager@v1.2
         with:
           github_personal_token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
           slack_token: ${{ secrets.SLACK_TOKEN }}
           channel: C03NZAUCWK0
+          jira_token: ${{ secrets.JIRA_API_TOKEN }}
+          jira_url: 'https://agrevolution.atlassian.net'
+          jira_useremail: 'shaik.ajmal@agrevolution.in'
+          jira_project_key: 'INC'
+          jira_issue_type: 'Task'
+      - name: Check Ouptuts
+        run: |
+          echo ${{ steps.pager.outputs.total_alerts }}
         
           
