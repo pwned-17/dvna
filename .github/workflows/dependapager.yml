@@ -5,7 +5,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  send-slack-alerts:
+  Jira-and-Slack-alerts:
     runs-on: ubuntu-latest
     steps:
       - name: Dependapager
