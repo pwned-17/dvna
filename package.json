@@ -30,7 +30,7 @@
     "passport-local": "^1.0.0",
     "sequelize": "^4.13.10",
     "winston": "^3.0.0",
-    "x-xss-protection": "^1.1.0",
+    "x-xss-protection": "^2.0.0",
     "@fastify/bearer-auth":"7.0.2",
     "shescape":" 1.4.0"
   }
