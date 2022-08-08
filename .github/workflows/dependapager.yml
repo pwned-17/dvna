@@ -10,7 +10,7 @@ jobs:
     steps:
       - name: Dependapager
         id: pager
-        uses: pwned-17/dependapager@v1.3
+        uses: pwned-17/dependapager@v1.4
         with:
           github_personal_token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
           slack_token: ${{ secrets.SLACK_TOKEN }}
